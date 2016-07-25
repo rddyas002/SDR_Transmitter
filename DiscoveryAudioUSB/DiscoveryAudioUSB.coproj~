@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.5" name="DiscoveryAudioUSB">
+  <Target name="DiscoveryAudioUSB" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="344" chipName="STM32F407VG" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value=""/>
+        <Includepaths>
+          <Includepath path="."/>
+          <Includepath path="usb"/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F4XX"/>
+          <Define name="MEDIA_IntFLASH"/>
+          <Define name="USE_USB_OTG_FS"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="USB_AUDIO"/>
+          <Define name="USE_DEVICE_MODE"/>
+          <Define name="I2S_24BIT"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="0"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Not use C Library"/>
+        <Option name="nostartfiles" value="0"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x00100000" startValue="0x08000000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00020000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="./stm32_flash.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="DiscoveryAudioUSB"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="./stm32f4xx_1024.elf"/>
+      <Option name="org.coocox.codebugger.gdbjtag.coredebugInRamInitCommands" value="cd D:/My_Documents/Coocox_WS/DiscoveryUSBAudio/DiscoveryUSBAudio/Debug/bin restore DiscoveryUSBAudio.elf set {unsigned int*}0xE000ED08 = 0x20000000 set $sp = {unsigned int*}0x20000000 set $pc = {unsigned int*}0x20000004 "/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./"/>
+  <Files>
+    <File name="usb/usbd_audio_out_if.h" path="usb/usbd_audio_out_if.h" type="1"/>
+    <File name="src/waverecorder.c" path="src/waverecorder.c" type="1"/>
+    <File name="src/waveplayer.c" path="src/waveplayer.c" type="1"/>
+    <File name="Libraries/CMSIS/ST/STM32F4xx" path="" type="2"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_fsmc.h" type="1"/>
+    <File name="src" path="" type="2"/>
+    <File name="Libraries/CMSIS" path="" type="2"/>
+    <File name="Libraries/CMSIS/Include" path="" type="2"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_spi.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dac.h" type="1"/>
+    <File name="Utilities/STM32F4-Discovery/stm32f4_discovery_audio_codec.h" path="Utilities/STM32F4-Discovery/stm32f4_discovery_audio_codec.h" type="1"/>
+    <File name="Libraries/CMSIS/ST/STM32F4xx/Source/Templates/TrueStudio/startup_stm32f4xx.s" path="Libraries/CMSIS/ST/STM32F4xx/Source/Templates/TrueSTUDIO/startup_stm32f4xx.s" type="1"/>
+    <File name="usb/usbd_ioreq.h" path="usb/usbd_ioreq.h" type="1"/>
+    <File name="Utilities/STM32F4-Discovery/stm32f4_discovery.h" path="Utilities/STM32F4-Discovery/stm32f4_discovery.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dcmi.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_gpio.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dma.h" type="1"/>
+    <File name="Utilities/STM32F4-Discovery/stm32f4_discovery_lis302dl.c" path="Utilities/STM32F4-Discovery/stm32f4_discovery_lis302dl.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc" path="" type="2"/>
+    <File name="Utilities/STM32F4-Discovery" path="" type="2"/>
+    <File name="usb/usbd_audio_out_if.c" path="usb/usbd_audio_out_if.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/misc.h" type="1"/>
+    <File name="usb/usb_dcd_int.h" path="usb/usb_dcd_int.h" type="1"/>
+    <File name="Utilities/STM32F4-Discovery/stm32f4_discovery.c" path="Utilities/STM32F4-Discovery/stm32f4_discovery.c" type="1"/>
+    <File name="Libraries/CMSIS/ST/STM32F4xx/Source" path="" type="2"/>
+    <File name="usb/usb_bsp.h" path="usb/usb_bsp.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dac.c" type="1"/>
+    <File name="Utilities/STM32F4-Discovery/stm32f4_discovery_audio_codec.c" path="Utilities/STM32F4-Discovery/stm32f4_discovery_audio_codec.c" type="1"/>
+    <File name="usb/usb_dcd.h" path="usb/usb_dcd.h" type="1"/>
+    <File name="inc/stm32f4xx_it.h" path="inc/stm32f4xx_it.h" type="1"/>
+    <File name="usb/usb_dcd.c" path="usb/usb_dcd.c" type="1"/>
+    <File name="usb/usbd_core.c" path="usb/usbd_core.c" type="1"/>
+    <File name="inc/usb_conf.h" path="inc/usb_conf.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_gpio.c" type="1"/>
+    <File name="inc/usb_bsp.h" path="../picoc_Xynergy_SD/usb/inc/usb_bsp.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_crc.h" type="1"/>
+    <File name="usb/usb_bsp.c" path="usb/usb_bsp.c" type="1"/>
+    <File name="Utilities" path="" type="2"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_syscfg.h" type="1"/>
+    <File name="usb/usbd_core.h" path="usb/usbd_core.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_iwdg.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_pwr.h" type="1"/>
+    <File name="usb/usb_core.h" path="usb/usb_core.h" type="1"/>
+    <File name="Utilities/STM32F4-Discovery/stm32f4_discovery_lis302dl.h" path="Utilities/STM32F4-Discovery/stm32f4_discovery_lis302dl.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src" path="" type="2"/>
+    <File name="inc/stm32f4xx_conf.h" path="inc/stm32f4xx_conf.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_tim.c" type="1"/>
+    <File name="usb/usb_core.c" path="usb/usb_core.c" type="1"/>
+    <File name="usb/usbd_desc.c" path="usb/usbd_desc.c" type="1"/>
+    <File name="usb/usbd_req.c" path="usb/usbd_req.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rcc.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_can.h" type="1"/>
+    <File name="Libraries/CMSIS/ST/STM32F4xx/Source/Templates/TrueStudio" path="" type="2"/>
+    <File name="usb/usbd_usr.h" path="usb/usbd_usr.h" type="1"/>
+    <File name="Libraries" path="" type="2"/>
+    <File name="Libraries/CMSIS/ST" path="" type="2"/>
+    <File name="usb/usbd_desc.h" path="usb/usbd_desc.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_rcc.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_flash.h" type="1"/>
+    <File name="inc/waverecorder.h" path="inc/waverecorder.h" type="1"/>
+    <File name="usb" path="" type="2"/>
+    <File name="stm32_flash.ld" path="stm32_flash.ld" type="1"/>
+    <File name="Libraries/CMSIS/ST/STM32F4xx/Source/Templates" path="" type="2"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_usart.h" type="1"/>
+    <File name="usb/usbd_req.h" path="usb/usbd_req.h" type="1"/>
+    <File name="src/stm32f4xx_it.c" path="src/stm32f4xx_it.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_adc.h" type="1"/>
+    <File name="src/main.c" path="src/main.c" type="1"/>
+    <File name="usb/usbd_def.h" path="usb/usbd_def.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_exti.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_i2c.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_dma.c" type="1"/>
+    <File name="usb/usbd_ioreq.c" path="usb/usbd_ioreq.c" type="1"/>
+    <File name="usb/usbd_audio_core.c" path="usb/usbd_audio_core.c" type="1"/>
+    <File name="usb/usbd_usr.c" path="usb/usbd_usr.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver" path="" type="2"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_tim.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_hash.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_dbgmcu.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_wwdg.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_spi.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_cryp.h" type="1"/>
+    <File name="inc" path="" type="2"/>
+    <File name="usb/usb_dcd_int.c" path="usb/usb_dcd_int.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rtc.h" type="1"/>
+    <File name="inc/waveplayer.h" path="inc/waveplayer.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_sdio.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_i2c.h" type="1"/>
+    <File name="inc/main.h" path="inc/main.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h" path="Libraries/STM32F4xx_StdPeriph_Driver/inc/stm32f4xx_rng.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/misc.c" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_exti.c" type="1"/>
+    <File name="Libraries/CMSIS/Include/core_cm4.h" path="Libraries/CMSIS/Include/core_cm4.h" type="1"/>
+    <File name="src/system_stm32f4xx.c" path="src/system_stm32f4xx.c" type="1"/>
+    <File name="Libraries/CMSIS/ST/STM32F4xx/stm32f4xx.h" path="Libraries/CMSIS/ST/STM32F4xx/Include/stm32f4xx.h" type="1"/>
+    <File name="usb/usbd_audio_core.h" path="usb/usbd_audio_core.h" type="1"/>
+    <File name="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c" path="Libraries/STM32F4xx_StdPeriph_Driver/src/stm32f4xx_syscfg.c" type="1"/>
+  </Files>
+</Project>

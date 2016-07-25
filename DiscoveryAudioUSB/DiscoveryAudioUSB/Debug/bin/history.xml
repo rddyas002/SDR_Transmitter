@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -g3 -Map=DiscoveryAudioUSB.map -O0 --gc-sections -LC:/Users/yreddi/Documents/DiscoveryAudioUSB -TC:/Users/yreddi/Documents/DiscoveryAudioUSB/stm32_flash.ld -g">
+      <target file="DiscoveryAudioUSB.elf" lastModified="14e6cfa7932">
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="14e61ae32be"/>
+         <source file="..\obj\usbd_req.o" lastModified="14e61ae2a3f"/>
+         <source file="..\obj\usbd_desc.o" lastModified="14e61ae25b9"/>
+         <source file="..\obj\usb_core.o" lastModified="14e61ae1c0e"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="14e61ae1fd8"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="14e61ae23bf"/>
+         <source file="..\obj\usbd_audio_out_if.o" lastModified="14e6cfa75b1"/>
+         <source file="..\obj\stm32f4xx_it.o" lastModified="14e6cfa76be"/>
+         <source file="..\obj\stm32f4_discovery.o" lastModified="14e61ae20be"/>
+         <source file="..\obj\main.o" lastModified="14e61c64ee5"/>
+         <source file="..\obj\stm32f4xx_dac.o" lastModified="14e61ae1fc4"/>
+         <source file="..\obj\stm32f4xx_i2c.o" lastModified="14e61ae2d29"/>
+         <source file="..\obj\stm32f4xx_dma.o" lastModified="14e61ae285d"/>
+         <source file="..\obj\usbd_ioreq.o" lastModified="14e61ae30a9"/>
+         <source file="..\obj\usbd_audio_core.o" lastModified="14e61c650fc"/>
+         <source file="..\obj\usbd_usr.o" lastModified="14e61ae1e01"/>
+         <source file="..\obj\usb_dcd.o" lastModified="14e61ae2fc9"/>
+         <source file="..\obj\usbd_core.o" lastModified="14e61ae21ae"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="14e61ae269c"/>
+         <source file="..\obj\stm32f4xx_spi.o" lastModified="14e61ae2c32"/>
+         <source file="..\obj\usb_dcd_int.o" lastModified="14e61ae2b3b"/>
+         <source file="..\obj\usb_bsp.o" lastModified="14e61ae293e"/>
+         <source file="..\obj\misc.o" lastModified="14e61ae2edd"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="14e61ae2e03"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="14e61ae2775"/>
+         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="14e61ae1af1"/>
+      </target>
+   </processor>
+</history>

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -g3 -Wall -O0 -c -DSTM32F4XX -DUSE_STDPERIPH_DRIVER -DUSB_AUDIO -DUSE_DEVICE_MODE -DUSE_USB_OTG_FS -D__FPU_USED -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Utilities\STM32F4-Discovery -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\inc -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\CMSIS\ST\STM32F4xx\Include -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Utilities -I..\..\..\..\..\..\..\Documents -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\STM32F4xx_StdPeriph_Driver\inc -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\STM32F4xx_StdPeriph_Driver -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\CMSIS\ST\STM32F4xx -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\CMSIS -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\CMSIS\Include -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\usb -I..\..\..\..\..\..\..\Documents\DiscoveryAudioUSB\Libraries\CMSIS\ST">
+      <target file="stm32f4xx_exti.o" lastModified="14e61ae2e03">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_exti.c" lastModified="1334b960210"/>
+      </target>
+      <target file="stm32f4xx_gpio.o" lastModified="14e61ae269c">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c" lastModified="1334b960210"/>
+      </target>
+      <target file="usbd_core.o" lastModified="14e61ae21ae">
+         <source file="..\..\..\usb\usbd_core.c" lastModified="144a07fda75"/>
+      </target>
+      <target file="usbd_desc.o" lastModified="14e61ae25b9">
+         <source file="..\..\..\usb\usbd_desc.c" lastModified="1448187cb42"/>
+      </target>
+      <target file="stm32f4xx_syscfg.o" lastModified="14e61ae1af1">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_syscfg.c" lastModified="1334b960210"/>
+      </target>
+      <target file="usbd_ioreq.o" lastModified="14e61ae30a9">
+         <source file="..\..\..\usb\usbd_ioreq.c" lastModified="1363add9147"/>
+      </target>
+      <target file="startup_stm32f4xx.o" lastModified="14e61ae1fd8">
+         <source file="..\..\..\Libraries\CMSIS\ST\STM32F4xx\Source\Templates\TrueSTUDIO\startup_stm32f4xx.s" lastModified="1334b95f270"/>
+      </target>
+      <target file="usbd_audio_core.o" lastModified="14e61c650fc">
+         <source file="..\..\..\usb\usbd_audio_core.c" lastModified="14e4d5de7ab"/>
+      </target>
+      <target file="stm32f4xx_tim.o" lastModified="14e61ae32be">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c" lastModified="1334b960210"/>
+      </target>
+      <target file="system_stm32f4xx.o" lastModified="14e61ae2775">
+         <source file="..\..\..\src\system_stm32f4xx.c" lastModified="1334b9630f0"/>
+      </target>
+      <target file="stm32f4_discovery.o" lastModified="14e61ae20be">
+         <source file="..\..\..\Utilities\STM32F4-Discovery\stm32f4_discovery.c" lastModified="1334b968eb0"/>
+      </target>
+      <target file="usb_bsp.o" lastModified="14e61ae293e">
+         <source file="..\..\..\usb\usb_bsp.c" lastModified="144722093c7"/>
+      </target>
+      <target file="misc.o" lastModified="14e61ae2edd">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c" lastModified="1334b960210"/>
+      </target>
+      <target file="stm32f4_discovery_audio_codec.o" lastModified="14e61b80dbc">
+         <source file="..\..\..\..\..\Downloads\DiscoveryAudioUSB_orig\DiscoveryAudioUSB\Utilities\STM32F4-Discovery\stm32f4_discovery_audio_codec.c" lastModified="14e61b803a1"/>
+      </target>
+      <target file="stm32f4xx_dma.o" lastModified="14e61ae285d">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c" lastModified="1334b960210"/>
+      </target>
+      <target file="usbd_req.o" lastModified="14e61ae2a3f">
+         <source file="..\..\..\usb\usbd_req.c" lastModified="13bbc2948cc"/>
+      </target>
+      <target file="stm32f4xx_spi.o" lastModified="14e61ae2c32">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_spi.c" lastModified="144a57578eb"/>
+      </target>
+      <target file="usbd_audio_out_if.o" lastModified="14e6cfa75b1">
+         <source file="..\..\..\usb\usbd_audio_out_if.c" lastModified="14e6cfa6117"/>
+      </target>
+      <target file="usb_dcd.o" lastModified="14e61ae2fc9">
+         <source file="..\..\..\usb\usb_dcd.c" lastModified="13bbc29488e"/>
+      </target>
+      <target file="usb_dcd_int.o" lastModified="14e61ae2b3b">
+         <source file="..\..\..\usb\usb_dcd_int.c" lastModified="13bb6b3f38e"/>
+      </target>
+      <target file="stm32f4xx_it.o" lastModified="14e6cfa76be">
+         <source file="..\..\..\src\stm32f4xx_it.c" lastModified="14e6cf9bf89"/>
+      </target>
+      <target file="stm32f4xx_rcc.o" lastModified="14e61ae23bf">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c" lastModified="1334b960210"/>
+      </target>
+      <target file="stm32f4xx_dac.o" lastModified="14e61ae1fc4">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dac.c" lastModified="1334b960210"/>
+      </target>
+      <target file="usb_core.o" lastModified="14e61ae1c0e">
+         <source file="..\..\..\usb\usb_core.c" lastModified="144d82e33f6"/>
+      </target>
+      <target file="stm32f4xx_i2c.o" lastModified="14e61ae2d29">
+         <source file="..\..\..\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_i2c.c" lastModified="1334b960210"/>
+      </target>
+      <target file="usbd_usr.o" lastModified="14e61ae1e01">
+         <source file="..\..\..\usb\usbd_usr.c" lastModified="1389e067e30"/>
+      </target>
+      <target file="main.o" lastModified="14e61c64ee5">
+         <source file="..\..\..\src\main.c" lastModified="14e4d629d27"/>
+      </target>
+   </processor>
+</history>
